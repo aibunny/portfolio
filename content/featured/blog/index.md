@@ -3,7 +3,7 @@ date: '1'
 title: 'Blog Website'
 cover: './demo.png'
 github: 'https://github.com/aibunny/aibunny.git'
-external: 'https://theaibunny.com/'
+external: 'https://blog.theaibunny.com/'
 tech:
   - Django
   - Javascript
