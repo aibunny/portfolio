@@ -69,11 +69,11 @@ const Footer = () => (
     <ScrollToTop className="scrollToTop" />
 
     <StyledCredit tabindex="-1">
-      <div id="Credit">Copyright © 2023 Emilia Yoffie.</div>
+      <div id="Credit">Copyright © AIbunny.</div>
       <div>
         {' '}
-        <a href="https://github.com/emiliayoffie/v4/">Built with Gatsby. </a> Inspired by{' '}
-        <a href="https://brittanychiang.com">Brittany Chiang</a>
+        <a href="https://github.com/aibunny/portfolio/">Built with Gatsby. </a> Inspired by{' '}
+        <a href="https://emiliayoffie.dev/">Emilia Yoffie</a>
       </div>
     </StyledCredit>
   </StyledFooter>

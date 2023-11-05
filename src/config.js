@@ -1,14 +1,26 @@
 module.exports = {
-  email: 'eyoffie.dev@gmail.com',
+  email: 'waihenyafredrick@gmail.com',
 
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/emiliayoffie',
+      url: 'https://github.com/aibunny',
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/aibunny._',
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/theaibunny',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/emiliayoffie',
+      url: 'https://www.linkedin.com/in/waihenya',
+    },
+    {
+      name: 'Medium',
+      url: 'https://aibunny.medium.com/',
     },
   ],
 

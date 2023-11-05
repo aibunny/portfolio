@@ -2,11 +2,12 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Emilia Yoffie',
+    title: 'aibunny',
     description:
-      'Emilia Yoffie is a software engineer who specializes in building full-stack applications.',
-    siteUrl: 'https://emiliayoffie.dev', // No trailing slash allowed!
+      'Fredrick Waihenya is a software engineer who specializes in building, scaling and maintaining APIs for multiple software products.',
+    siteUrl: 'https://theaibunny.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: 'theaibunny',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Emilia Yoffie',
-        short_name: 'Emilia Yoffie',
+        name: 'Fredrick Waihenya',
+        short_name: 'Fredrick Waihenya',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
