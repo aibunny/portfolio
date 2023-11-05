@@ -9,17 +9,15 @@ const StyledHeroSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
-  height: 100vh;
   padding: 0;
 
-  @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
-    height: auto;
-    padding-top: var(--nav-height);
+  @media (max-width: 480px) and (min-height: 700px) {
+    padding-bottom: 10vh;
   }
 
   h1 {
     margin: 0 0 30px 4px;
-    color: var(--bright-strawberry);
+    color: var(--green);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
@@ -30,8 +28,8 @@ const StyledHeroSection = styled.section`
   }
 
   h3 {
-    margin-top: 5px;
-    color: var(--bright-strawberry);
+    margin-top: 10px;
+    color: var(--slate);
     line-height: 0.9;
   }
 
@@ -59,33 +57,20 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Emilia Yoffie.</h2>;
-  const three = <h3 className="big-heading">I build unique & accessible digital experiences.</h3>;
+  const one = <h1>Hey there, I'm</h1>;
+  const two = <h2 className="big-heading">AIBUNNY!</h2>;
+  const three = <h3 className="big-heading">I'm a digital goofball.</h3>;
   const four = (
     <>
       <p>
-        I’m a full-stack software engineer passionate about the growth mindset, collaboration, and
-        solving complex problems. Currently, I’m part of the{' '}
-        <a
-          href="https://www.linkedin.com/company/cs-engineering-tech-team/mycompany/"
-          target="_blank"
-          rel="noreferrer">
-          CS Engineering
-        </a>{' '}
-        team at{' '}
-        <a href="https://codesmith.io/" target="_blank" rel="noreferrer">
-          {' '}
-          Codesmith{' '}
-        </a>
-        , where I mentor junior developers, in addition to engineering & improving major features of
-        the legacy enterprise codebase.
+        I transform code into giggles and bring joy to the tech world. I'm a master of goofing
+        around in the backend and a little touch in the world of DevOps.
       </p>
     </>
   );
   const five = (
-    <a href="/resume.pdf" className="email-link">
-      Check out my Resume
+    <a className="email-link" href="https://github.com/aibunny" target="_blank" rel="noreferrer">
+      Check out my GitHub
     </a>
   );
 

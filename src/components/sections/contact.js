@@ -16,7 +16,7 @@ const StyledContactSection = styled.section`
   .overline {
     display: block;
     margin-bottom: 20px;
-    color: var(--bright-strawberry);
+    color: var(--green);
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 400;
@@ -55,17 +55,18 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="numbered-heading overline">Get in Touch</h2>
 
-      <h2 className="title">Get In Touch</h2>
+      <h2 className="title">Say Hello</h2>
 
       <p>
-        I'm currently open to new opportunities. Whether you're looking for an engineer or have a
-        question, drop me an email!
+        I'm a passionate developer with expertise in backend and devops. I love creating robust
+        solutions and exploring new technologies. If you'd like to discuss potential projects or
+        just have a friendly chat, feel free to reach out.
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>
-        Say Hello
+        Contact Me
       </a>
     </StyledContactSection>
   );

@@ -117,14 +117,14 @@ const StyledProject = styled.li`
 
   .project-overline {
     margin: 10px 0;
-    color: var(--bright-strawberry);
+    color: var(--green);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 400;
   }
 
   .project-title {
-    color: var(--soft-green);
+    color: var(--lightest-slate);
     font-size: clamp(24px, 5vw, 28px);
 
     @media (min-width: 768px) {
@@ -132,7 +132,7 @@ const StyledProject = styled.li`
     }
 
     @media (max-width: 768px) {
-      color: var(--bright-strawberry);
+      color: var(--white);
 
       a {
         position: static;
@@ -157,8 +157,8 @@ const StyledProject = styled.li`
     z-index: 2;
     padding: 25px;
     border-radius: var(--border-radius);
-    background-color: var(--dull-strawberry);
-    color: var(-brown);
+    background-color: var(--light-navy);
+    color: var(--light-slate);
     font-size: var(--fz-lg);
 
     @media (max-width: 768px) {
@@ -176,7 +176,7 @@ const StyledProject = styled.li`
     }
 
     strong {
-      color: var(--bright-strawberry);
+      color: var(--white);
       font-weight: normal;
     }
   }
@@ -192,7 +192,7 @@ const StyledProject = styled.li`
 
     li {
       margin: 0 20px 5px 0;
-      color: var(--dark-blue);
+      color: var(--light-slate);
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
@@ -203,7 +203,7 @@ const StyledProject = styled.li`
 
       li {
         margin: 0 10px 5px 0;
-        color: var(--dark-brown);
+        color: var(--lightest-slate);
       }
     }
   }
@@ -214,7 +214,7 @@ const StyledProject = styled.li`
     position: relative;
     margin-top: 10px;
     margin-left: -10px;
-    color: var(--dark-brown);
+    color: var(--lightest-slate);
 
     a {
       ${({ theme }) => theme.mixins.flexCenter};
@@ -233,6 +233,11 @@ const StyledProject = styled.li`
         height: 20px;
       }
     }
+
+    .cta {
+      ${({ theme }) => theme.mixins.smallButton};
+      margin: 10px;
+    }
   }
 
   .project-image {
@@ -245,13 +250,13 @@ const StyledProject = styled.li`
     @media (max-width: 768px) {
       grid-column: 1 / -1;
       height: 100%;
-      opacity: 0.1;
+      opacity: 0.25;
     }
 
     a {
       width: 100%;
       height: 100%;
-      background-color: var();
+      background-color: var(--green);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -278,7 +283,7 @@ const StyledProject = styled.li`
         bottom: 0;
         z-index: 3;
         transition: var(--transition);
-        background-color: var(--light-brown);
+        background-color: var(--navy);
         mix-blend-mode: screen;
       }
     }
@@ -286,11 +291,13 @@ const StyledProject = styled.li`
     .img {
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {
         object-fit: cover;
         width: auto;
         height: 100%;
+        filter: grayscale(100%) contrast(1) brightness(50%);
       }
     }
   }
@@ -298,10 +305,10 @@ const StyledProject = styled.li`
 
 const Featured = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       featured: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/featured/" } }
-        sort: { fields: [frontmatter___date], order: ASC }
+        filter: { fileAbsolutePath: { regex: "/featured/" } }
+        sort: { frontmatter: { date: ASC } }
       ) {
         edges {
           node {
@@ -315,7 +322,6 @@ const Featured = () => {
               tech
               github
               external
-              medium
             }
             html
           }
@@ -348,7 +354,7 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, medium } = frontmatter;
+            const { external, title, tech, github, cover, cta } = frontmatter;
             const image = getImage(cover);
 
             return (
@@ -375,9 +381,9 @@ const Featured = () => {
                     )}
 
                     <div className="project-links">
-                      {medium && (
-                        <a href={medium} aria-label="Medium">
-                          <Icon name="Medium" />
+                      {cta && (
+                        <a href={cta} aria-label="Course Link" className="cta">
+                          Learn More
                         </a>
                       )}
                       {github && (
@@ -385,7 +391,7 @@ const Featured = () => {
                           <Icon name="GitHub" />
                         </a>
                       )}
-                      {external && !medium && (
+                      {external && !cta && (
                         <a href={external} aria-label="External Link" className="external">
                           <Icon name="External" />
                         </a>

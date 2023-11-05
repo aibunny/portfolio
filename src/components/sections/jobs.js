@@ -73,9 +73,9 @@ const StyledTabButton = styled.button`
   width: 100%;
   height: var(--tab-height);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--light-strawberry);
+  border-left: 2px solid var(--lightest-navy);
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? 'var(bright-strawberry)' : 'var(--dark-brown)')};
+  color: ${({ $isActive }) => ($isActive ? 'var(--green)' : 'var(--slate)')};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -89,13 +89,13 @@ const StyledTabButton = styled.button`
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid var(--light-strawberry);
+    border-bottom: 2px solid var(--lightest-navy);
     text-align: center;
   }
 
   &:hover,
   &:focus {
-    background-color: var(--soft-green-tint);
+    background-color: var(--light-navy);
   }
 `;
 
@@ -107,8 +107,8 @@ const StyledHighlight = styled.div`
   width: 2px;
   height: var(--tab-height);
   border-radius: var(--border-radius);
-  background: var(--bright-strawberry);
-  transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
+  background: var(--green);
+  transform: translateY(calc(${({ $activeTabId }) => $activeTabId} * var(--tab-height)));
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
@@ -119,7 +119,7 @@ const StyledHighlight = styled.div`
     max-width: var(--tab-width);
     height: 2px;
     margin-left: 50px;
-    transform: translateX(calc(${({ activeTabId }) => activeTabId} * var(--tab-width)));
+    transform: translateX(calc(${({ $activeTabId }) => $activeTabId} * var(--tab-width)));
   }
   @media (max-width: 480px) {
     margin-left: 25px;
@@ -152,13 +152,13 @@ const StyledTabPanel = styled.div`
     line-height: 1.3;
 
     .company {
-      color: var(--bright-strawberry);
+      color: var(--green);
     }
   }
 
   .range {
     margin-bottom: 25px;
-    color: var(--soft-green);
+    color: var(--light-slate);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
   }
@@ -168,8 +168,8 @@ const Jobs = () => {
   const data = useStaticQuery(graphql`
     query {
       jobs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/jobs/" } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { fileAbsolutePath: { regex: "/jobs/" } }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {
@@ -254,7 +254,7 @@ const Jobs = () => {
               return (
                 <StyledTabButton
                   key={i}
-                  isActive={activeTabId === i}
+                  $isActive={activeTabId === i}
                   onClick={() => setActiveTabId(i)}
                   ref={el => (tabs.current[i] = el)}
                   id={`tab-${i}`}
@@ -266,7 +266,7 @@ const Jobs = () => {
                 </StyledTabButton>
               );
             })}
-          <StyledHighlight activeTabId={activeTabId} />
+          <StyledHighlight $activeTabId={activeTabId} />
         </StyledTabList>
 
         <StyledTabPanels>
