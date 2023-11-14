@@ -1,12 +1,11 @@
 ---
 date: '2021-04-01'
-title: 'Python Developer'
+title: 'Junior Software Developer'
 company: 'Tirotech Solutions'
 location: 'Nairobi, KE'
 range: 'April 2021 - March 2022'
 url: 'https://www.tiritechsolutions.co.ke'
 ---
-
 - Led and collaborated with cross-functional teams to identify and
   solve complex technical problems as per user requirements.Utilized Django (Python frameworks) and Gin (Go framework) to build web applications and
   APIs.
