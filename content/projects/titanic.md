@@ -10,5 +10,4 @@ tech:
   - Numpy
 showInProjects: true
 ---
-
 This project is focused on utilizing machine learning, specifically logistic regression, to analyze and predict the survival of passengers on the Titanic.
