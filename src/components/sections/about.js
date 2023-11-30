@@ -132,11 +132,12 @@ const About = () => {
 
   const skills = [
     'Python',
-    'Go',
     'Django Rest Framework',
-    'Gin',
+    'Fast API',
+    'Langchain',
     'Graphene-Django',
     'Flask',
+    'LLMs',
     'Docker',
     'GCP',
     'AWS',
