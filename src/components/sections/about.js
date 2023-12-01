@@ -161,7 +161,7 @@ const About = () => {
             <p>
               Greetings! I'm Fredrick Waihenya, a seasoned backend engineer with a strong passion
               for technology and a knack for crafting sophisticated software solutions. I currently
-              serve as the CTO and lead backend developer at Clickbanx, where I work alongside a
+              serve as the lead backend developer at Clickbanx, where I work alongside a
               team of digital wizards.
             </p>
 
