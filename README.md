@@ -5,7 +5,7 @@
   aibunny
 </h1>
 <p align="center">
-  The first iteration of <a href="https://www.theaibunny.com/" target="_blank">aibunny</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.vercel.com/" target="_blank">vercel</a>. Forked from the amazing <a href="https://github.com/emiliayoffie/v4/" target="_blank">Emilia Yoffie.</a> and iterated on by yours truly.
+  The first iteration of <a href="https://www.theaibunny.com/" target="_blank">aibunny</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.vercel.com/" target="_blank">vercel</a>. Forked from the amazing <a href="https://github.com/emiliayoffie/v4/" target="_blank">Emilia Yoffie.</a> and iterated on by yours truly AIBUNNY.
 </p>
 <!-- <p align="center">
   <a href="https://app.netlify.com/sites/emiliayoffie/deploys" target="_blank">
