@@ -149,6 +149,11 @@ const About = () => {
     'Linux Admin',
     'Agile Methodologies',
     'Container Orchestration',
+    'DBT',
+    'Apache Superset',
+    'Big Query',
+    'Apache Kafka',
+    'Apache Airflow'
   ];
 
   return (
