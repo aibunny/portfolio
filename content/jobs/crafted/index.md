@@ -1,6 +1,6 @@
 ---
 date: '2024-10-01'
-title: 'Data/Analtics Engineer'
+title: 'Data/Analytics Engineer'
 company: 'Crafted System'
 location: 'Nairobi, KE'
 range: 'January 2024 - Present'
