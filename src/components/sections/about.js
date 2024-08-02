@@ -134,8 +134,9 @@ const About = () => {
     'Python',
     'Django Rest Framework',
     'Fast API',
+    'Typescript'
+    'Express',
     'Langchain',
-    'Graphene-Django',
     'Flask',
     'LLMs',
     'Docker',
@@ -144,14 +145,9 @@ const About = () => {
     'NOSQL',
     'SQL',
     'Redis',
-    'CI/CD',
-    'Web Servers',
-    'Linux Admin',
-    'Agile Methodologies',
-    'Container Orchestration',
+    'Kubernetes',
     'DBT',
     'Apache Superset',
-    'Big Query',
     'Apache Kafka',
     'Apache Airflow'
   ];
