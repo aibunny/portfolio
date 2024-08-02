@@ -134,7 +134,7 @@ const About = () => {
     'Python',
     'Django Rest Framework',
     'Fast API',
-    'Typescript'
+    'Typescript',
     'Express',
     'Langchain',
     'Flask',
