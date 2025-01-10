@@ -1,5 +1,5 @@
 module.exports = {
-  email: 'waihenyafredrick@gmail.com',
+  email: 'bunny@theaibunny.com',
 
   socialMedia: [
     {
@@ -8,7 +8,7 @@ module.exports = {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/aibunny._',
+      url: 'https://www.instagram.com/0xOops',
     },
     {
       name: 'Twitter',
@@ -16,11 +16,11 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/waihenya',
+      url: 'https://www.linkedin.com/in/0xOops',
     },
     {
       name: 'Medium',
-      url: 'https://aibunny.medium.com/',
+      url: 'https://aibunny.medium.com/0xOops',
     },
   ],
 

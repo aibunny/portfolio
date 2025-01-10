@@ -57,11 +57,10 @@ const Contact = () => {
     <StyledContactSection id="contact" ref={revealContainer}>
       <h2 className="numbered-heading overline">Get in Touch</h2>
 
-      <h2 className="title">Say Hello</h2>
+      <h2 className="title">Gimme a shout!</h2>
 
       <p>
-        I'm a passionate developer with expertise in backend and devops. I love creating robust
-        solutions and exploring new technologies. If you'd like to discuss potential projects or
+        I'm an Onchain Dev. I love nomarding while building solutions and exploring decentralized technologies that have impact in the global ecosystem. If you'd like to discuss potential projects or
         just have a friendly chat, feel free to reach out.
       </p>
 

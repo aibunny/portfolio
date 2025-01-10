@@ -63,8 +63,9 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I transform code into giggles and bring joy to the tech world. I'm a master of goofing
-        around in the backend and a little touch in the world of DevOps.
+        My background in traditional tech combined with my hands-on experience in
+        blockchain development has given me a unique perspective on building scalable,
+        secure software solutions.
       </p>
     </>
   );
