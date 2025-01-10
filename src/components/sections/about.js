@@ -151,6 +151,8 @@
       'Rust',
       'Solidity',
       'NodeJs',
+      'Smart Contracts',
+      'DeFi/GameFi',
       'Docker',
       'Redis',
       'Kubernetes',
