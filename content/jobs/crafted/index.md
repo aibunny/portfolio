@@ -3,7 +3,7 @@ date: '2024-10-01'
 title: 'Data/Analytics Engineer'
 company: 'Crafted System'
 location: 'Nairobi, KE'
-range: 'January 2024 - Present'
+range: 'January 2024 - October 2024'
 url: 'https://www.crafted.co.ke'
 ---
 - Engineering end-to-end data pipelines that are playing a pivotal role in the design and development of our proprietary software application's data architecture, ensuring efficient data flow and analytics capabilities that support over 20 organizations.

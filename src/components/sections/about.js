@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import styled from 'styled-components';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
-import { usePrefersReducedMotion } from '@hooks';
+  import React, { useEffect, useRef } from 'react';
+  import { StaticImage } from 'gatsby-plugin-image';
+  import styled from 'styled-components';
+  import { srConfig } from '@config';
+  import sr from '@utils/sr';
+  import { usePrefersReducedMotion } from '@hooks';
 
-const StyledAboutSection = styled.section`
+  const StyledAboutSection = styled.section`
   max-width: 900px;
 
   .inner {
@@ -18,7 +18,22 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
-const StyledText = styled.div`
+
+  const StyledJourney = styled.div`
+  font-size: var(--fz-sm);
+  color: var(--soft-green);
+  line-height: 1.5;
+  margin: 15px 0;
+
+  a {
+    color: var(--bright-strawberry);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+  const StyledText = styled.div`
   #my-tech {
     color: var(--bright-strawberry);
   }
@@ -51,7 +66,8 @@ const StyledText = styled.div`
     }
   }
 `;
-const StyledPic = styled.div`
+
+  const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
 
@@ -118,87 +134,89 @@ const StyledPic = styled.div`
   }
 `;
 
-const About = () => {
-  const revealContainer = useRef(null);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const About = () => {
+    const revealContainer = useRef(null);
+    const prefersReducedMotion = usePrefersReducedMotion();
 
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    useEffect(() => {
+      if (prefersReducedMotion) {
+        return;
+      }
 
-    sr.reveal(revealContainer.current, srConfig());
-  }, []);
+      sr.reveal(revealContainer.current, srConfig());
+    }, []);
 
-  const skills = [
-    'Python',
-    'Django Rest Framework',
-    'Fast API',
-    'Typescript',
-    'Express',
-    'Langchain',
-    'Flask',
-    'LLMs',
-    'Docker',
-    'GCP',
-    'AWS',
-    'NOSQL',
-    'SQL',
-    'Redis',
-    'Kubernetes',
-    'DBT',
-    'Apache Superset',
-    'Apache Kafka',
-    'Apache Airflow'
-  ];
+    const skills = [
+      'Typescript',
+      'Rust',
+      'Solidity',
+      'NodeJs',
+      'Docker',
+      'Redis',
+      'Kubernetes',
+      'Python',
+      'NOSQL',
+      'SQL',
+      'DBT',
+      'Django Rest Framework',
+      'Apache Superset',
+      'Apache Kafka',
+      'Apache Airflow'
+    ];
 
-  return (
-    <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+    return (
+      <StyledAboutSection id="about" ref={revealContainer}>
+        <h2 className="numbered-heading">About Me</h2>
 
-      <div className="inner">
-        <StyledText>
-          <div>
-            <p>
-              Greetings! I'm Fredrick Waihenya, a seasoned backend engineer with a strong passion
-              for technology and a knack for crafting sophisticated software solutions. I currently
-              serve as the lead backend developer at Clickbanx, where I work alongside a
-              team of digital wizards.
-            </p>
+        <div className="inner">
+          <StyledText>
+            <div>
+              <p>
+                WSG Bunny here! After serving in various web2 roles as a data and backend engineer,
+                I made the exciting decision to pivot into web3 technologies and decentralized systems.
+                I am a self proclaimed DEGEN and a bullish builder.
+              </p>
 
-            <p>
-              Over the years, I've had the privilege of contributing my expertise to various
-              esteemed organizations, including <a href="https://clickbanx.africa/">Clickbanx</a>, a
-              fintech powerhouse; <a href="https://hasibu.ke/">Hasibu</a>, a cloud-based Point of
-              Sale innovator; and <a href="https://monzo.com/">Monzo</a>, a prominent fintech giant.
-              Additionally, I've sprinkled a bit of magic at{' '}
-              <a href="https://tirotech.co.ke/">Tirotech Solutions</a>, a leading IT service
-              provider.
-            </p>
+              <StyledJourney>
+                <p>
+                  What started as a curiosity transformed into a full-time passion when I transitioned from
+                  traditional tech roles at companies like <a href="https://www.crafted.co.ke/">Crafted Systems</a> and{' '}
+                  <a href="https://monzo.com/">Monzo</a> to dive headfirst into web3. Now, I spend my days crafting
+                  DeFi protocols, building GameFi experiences, and running nodes across various networks.
+                  There's something incredibly exciting about contributing to this space - whether it's optimizing
+                  yield strategies, developing innovative gaming mechanics on-chain, or ensuring network security
+                  through node operations.
+                </p>
+                <p>
+                  My background in traditional tech combined with my hands-on experience in
+                  blockchain development has given me a unique perspective on building scalable,
+                  secure software applications.
+                </p>
+              </StyledJourney>
 
-            <p>My tech repertoire includes a diverse range of skills, such as:</p>
-          </div>
+              <p>My current technical stack includes:</p>
+            </div>
 
-          <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul>
-        </StyledText>
+            <ul className="skills-list">
+              {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            </ul>
+          </StyledText>
 
-        <StyledPic>
-          <div className="wrapper">
-            <StaticImage
-              className="img"
-              src="../../images/me.png"
-              width={500}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
-          </div>
-        </StyledPic>
-      </div>
-    </StyledAboutSection>
-  );
-};
+          <StyledPic>
+            <div className="wrapper">
+              <StaticImage
+                className="img"
+                src="../../images/samurai.jpeg"
+                width={500}
+                quality={95}
+                formats={['AUTO', 'WEBP', 'AVIF']}
+                alt="Headshot"
+              />
+            </div>
+          </StyledPic>
+        </div>
+      </StyledAboutSection>
+    );
+  };
 
-export default About;
+  export default About;
